@@ -1,0 +1,23 @@
+<html>
+    <head>
+            <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <title>Student Form</title>
+        <link rel="stylesheet" href="studentUpdate.css">
+    </head>
+    <body>
+                <h2 align="center">Student Data Entry Form</h2>
+            <div name="form" class="forms">
+                    <img src="logosmall.png">
+            <form action="insert.php" method="POST" autocomplete="off" enctype="multipart/form-data">
+            <label>Name:</label><input type="text" name="user">
+        <label> Address:</label><input type="text" name="add">
+            <label for="gender">Gender:</label><input type="radio" name="gender" value="male" style="margin-left:5%;"><label style="width: unset;color:green;background:  unset;">Male</label>
+            <input type="radio" name="gender" value="female"><label style="width: unset;background: unset;color: green;">Female</label>
+            <br>
+            <input type="file" name="img">
+            <button value="submit" name="trigger" type="submit">Submit</button>
+                </form>
+            </div>
+            
+    </body>
+</html>
