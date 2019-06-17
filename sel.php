@@ -3,6 +3,8 @@
 <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="studentUpdate.css">
+<link href="css/all.css" rel="stylesheet" type="text/css" />
+<link href="webfonts/" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript">
 function delete_data(){
@@ -50,7 +52,10 @@ while($row=mysqli_fetch_array($se,MYSQLI_ASSOC))
     <td><?php echo $row['address'];?></td>
     <td><?php echo $row['gender'];?></td>
     <td><a href="updateForm.php?od=<?php echo $row['sn'];?>"><abbr title="Edit"><img src="pencil.png" style="height:20px;" id="hov"></abbr></a>
-    <a href="newselect.php?od=<?php echo $row['sn'];?>" onclick="return delete_data();" id="delet" style="background:silver;border-radius:20px;border:none;"><abbr title="Delete"><img src="bin.png" style="height:20px;"></abbr></a></td>
+    <a href="newselect.php?od=<?php echo $row['sn'];?>" onclick="return delete_data();" id="delet" style="background:silver;border-radius:20px;border:none;"><abbr title="Delete"><img src="bin.png" style="height:20px;"></abbr></a>
+    <a href="view.php?od=<?php echo $row['sn']?>" id="pic" name="pic">
+    <abbr title="view">
+    <i class="fas fa-eye" style="color:black;"></i></abbr></a></td>
     </tr>
     <?php
 }
